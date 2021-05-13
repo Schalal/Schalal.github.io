@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>添加控件和覆盖物的百度地图</title>
+		<style type=text/css>
+			html{height:100%}
+			body{height:100%;margin:0px;padding:0px}
+			#container{height:100%}
+		</style>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=3mLXFHtSuAG0x16vCq7bTVO2SSPerdBG">
+		</script>
+	</head>
+	<body>
+		<div id="container"></div>
+		<script type="text/javascript">
+			//构造百度地图实例
+			var map = new BMap.Map("container");
+			//设置可滚轮缩放，可惯性拖拽
+			map.enableScrollWheelZoom(true);
+			map.enableInertialDragging(true);
+			//与代码00中的WGS84坐标位置相同，但是没有进行坐标转换
+			var point = new BMap.Point(114.3549158,30.5278248)
+			map.centerAndZoom(point, 18);
+			//添加标注
+			var marker = new BMap.Marker(point);
+			map.addOverlay(marker);
+			//更改地图风格
+			var mapStyle = {style: "bluish"}
+			map.setMapStyle(mapStyle);
+			//构造控件实例，并将其添加入已构造的Map实例中
+			//scaleCtrl--->比例尺控件，navCtrl--->平移缩放控件
+			//mapTypeCtrl--->地图类型控件，locCtrl--->定位控件
+			//比例尺控件默认在左下方，设置偏移量
+			var scaleCtrl = new BMap.ScaleControl({offset: new BMap.Size(Math.round(0.5*window.screen.width),15)});
+			map.addControl(scaleCtrl);
+			//平移缩放控件默认在左上方，默认类别为标准样式（平移、缩放和滑块），设置其类别为仅平移和缩放
+			var navCtrl = new BMap.NavigationControl({type: BMAP_NAVIGATION_CONTROL_SMALL});
+			map.addControl(navCtrl);
+			//地图类型空间默认在右上方，默认类别为横排，更改其类别为图片
+			var mapTypeCtrl = new BMap.MapTypeControl({type: BMAP_MAPTYPE_CONTROL_MAP});
+			map.addControl(mapTypeCtrl);
+			//定位控件默认位置为左下方，将其设置在右下方
+			var locCtrl = new BMap.GeolocationControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT});
+			map.addControl(locCtrl);
+			//添加边界的多边形覆盖
+			var bound = map.getBounds();
+			var pointNE = bound.getNorthEast();
+			var pointSW = bound.getSouthWest();
+			var pointNW = new BMap.Point(pointSW.lng, pointNE.lat);
+			var pointSE = new BMap.Point(pointNE.lng, pointSW.lat);
+			map.addOverlay(new BMap.Polygon([pointNE,pointNW,pointSW,pointSE],{
+				strokeColor:"#b88eff",
+				strokeWeight:3,
+				fillColor:"#aaffff",
+				fillOpacity:0.2
+				})
+			);
+			//转换坐标系
+			var points = [];
+			points.push(point);
+			var convertor = new BMap.Convertor();
+			convertor.translate(points, 0, 5,function(data){
+				if(data.status == 0){
+				//文本标注
+				var label = new BMap.Label("WHU-SRES",{position:data.points[0]});
+				label.setStyle({
+					color:"#228f1d",
+					fontFamily:"Consolas",
+					fontSize:"20px",
+					borderColor:"#0936da"
+				});
+				map.addOverlay(label);
+				}
+			});
+		</script>
+	</body>
+</html>

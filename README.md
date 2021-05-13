@@ -6,6 +6,10 @@
 
 [MY BLOGS](./TESTMD.md)
 
+md好像链接不过去...
+
+[html可以吗？](./01AddControls.html)
+
 ### Markdown
 
 Makedown是一种适用于格式化写作内容的轻量级的易于使用的语言，它包含如下一些规则：
