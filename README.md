@@ -4,7 +4,7 @@
 
 ## 这是一个到待写的博客首页的传送链接
 
-[MY BLOGS](./)
+[MY BLOGS](./TESTMD.md)
 
 ### Markdown
 
