@@ -10,6 +10,8 @@ md好像链接不过去...
 
 [html可以吗？](./01AddControls.html)
 
+测试Echarts:[ECharts](./pictorialBar-forest.html)
+
 不，其实它们都可以被链接进去！
 
 （啊这，为什么之前不可以呢？
