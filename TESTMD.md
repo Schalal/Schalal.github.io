@@ -17,6 +17,6 @@ Hello, this is Shuaichen Yan.
 12. Python爬虫
 13. Python自然语言处理
 14. GIS原理、空间数据库等基础知识
-15. [计算几何](./ComputationalGeometryContent.md)
+15. [计算几何](./ComputationalGeometry/00绪论.md)
 
 ............
