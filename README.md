@@ -6,11 +6,7 @@
 
 [MY BLOGS](./TESTMD.md)
 
-md好像链接不过去...
-
-[html可以吗？](./01AddControls.html)
-
-测试Echarts:[ECharts](./pictorialBar-forest.html)
+测试Echarts(html文件):[ECharts](./linear-regression.html)
 
 不，其实它们都可以被链接进去！
 

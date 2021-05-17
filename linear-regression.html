@@ -1,0 +1,86 @@
+<!--ECharts图表-->>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div id="LRDiv" style="height:100%"></div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-nightly@5.1.2-dev.20210512/dist/echarts.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-nightly@5.1.2-dev.20210512/dist/extension/dataTool.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+</body>
+</html>
+<!--历年造林量线性回归-->
+<script type="text/javascript">
+    echarts.registerTransform(ecStat.transform.regression);
+    var LRDom = document.getElementById("LRDiv");
+    var LRChart = echarts.init(LRDom);
+    var LROption;
+    var data = [
+    [2004, 5598079],
+    [2005, 3647942],
+    [2006, 2717925],
+    [2007, 3907711],
+    [2008, 5354387],
+    [2009, 6262330],
+    [2010, 5909919],
+    [2011, 5996613],
+    [2012, 5595791],
+    [2013, 6100057],
+    [2014, 5549612],
+    [2015, 7683695],
+    [2016, 7203509],
+    [2017, 7680711]
+    ];
+    LROption = {
+        dataset: [{
+            source: data
+        }, {
+            transform: {
+                type: 'ecStat:regression'
+            }
+        }],
+        title: {
+            text: '中国2004-2017年历年造林总量线性回归',
+            subtext: '数据来源：《中国环境统计年鉴》',
+            left: 'center'
+        },
+        legend: {
+            bottom: 5
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                label: {precision:0}
+            }
+        },
+        xAxis: {
+            name: '年份',
+            max: 2020,
+            min: 2000,
+            axisLabel: { formatter: '{value}年' }
+        },
+        yAxis: {
+            name: '造林量（公顷）',
+            min: 2000000
+        },
+        series: [{
+            name: '历年造林量（公顷）',
+            type: 'scatter',
+            color: '#A5D6A7'
+        }, {
+            name: '线性回归拟合',
+            type: 'line',
+            color: '#00897B',
+            datasetIndex: 1,
+            symbolSize: 0.2,
+            symbol: 'circle',
+            label: { show: true, fontSize: 16 },
+            labelLayout: { dx: -20 },
+            encode: { label: 2, tooltip: 1 }
+        }]
+    };
+    LRChart.setOption(LROption);
+</script>
