@@ -8,10 +8,6 @@
 
 测试Echarts(html文件):[ECharts](./linear-regression.html)
 
-不，其实它们都可以被链接进去！
-
-（啊这，为什么之前不可以呢？
-
 ### Markdown
 
 Makedown是一种适用于格式化写作内容的轻量级的易于使用的语言，它包含如下一些规则：
