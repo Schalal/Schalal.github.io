@@ -6,8 +6,6 @@
 
 [MY BLOGS](./TESTMD.md)
 
-测试Echarts(html文件):[ECharts](./linear-regression.html)
-
 ### Markdown
 
 Makedown是一种适用于格式化写作内容的轻量级的易于使用的语言，它包含如下一些规则：
