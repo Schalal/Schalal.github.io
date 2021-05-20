@@ -6,6 +6,12 @@
 
 [MY BLOGS](./TESTMD.md)
 
+ECharts测试
+[1](./ChinaAfforestationAreaSerires.html)
+[2](./ShaanxiEconomicForestChange.html)
+[3](./ShaanxiForestAreaSeries.html)
+[4](./ShaanxiForestCoverRateSeries.html)
+
 ### Markdown
 
 Makedown是一种适用于格式化写作内容的轻量级的易于使用的语言，它包含如下一些规则：
