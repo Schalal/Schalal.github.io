@@ -12,6 +12,7 @@ ECharts测试
 [3](./ShaanxiForestAreaSeries.html)
 [4](./ShaanxiForestCoverRateSeries.html)
 [5](./China20202002NDVISubtract.html)
+[6](./index.html)
 
 图片
 ![自相关](./ReturnFarmlandForestSpatialAutocorrelation.png)
