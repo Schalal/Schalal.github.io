@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="no-js">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="robots" content="noindex">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>时钟——时间轴</title>
+		<link rel='stylesheet' href='css/history.css' type='text/css' media='all' />
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script type='text/javascript' src='js/lodash.js'></script>
+		<script type='text/javascript' src='js/TweenMax.min.js'></script>
+		<script type='text/javascript' src='js/DrawSVGPlugin.js'></script>
+		<script type='text/javascript' src='js/namespaces.js'></script>
+		<script type="text/javascript">
+			function preload_images(images, functions) {
+				if (typeof functions === 'undefined') functions = {};
+				var loaded = 0;
+				for (var i = 0; i < images.length; i++) {
+					////console.log('preload '+images[i]);
+					var img = new Image();
+					img.onload = img.onerror = function() {
+						////console.log(img.src + ' loaded');
+						var onImgParams = {
+							//img : img,
+							//index : i,
+							loadedPct: (loaded / images.length)
+						};
+						if (_.isFunction(functions.onImgLoad)) functions.onImgLoad(onImgParams);
+
+						loaded++;
+						if (loaded >= images.length && _.isFunction(functions.onAllImgsLoaded)) {
+							////console.log('all imgs loaded');
+							functions.onAllImgsLoaded()
+						}
+					};
+					img.src = images[i];
+				} // endfor
+			} // preload_images()
+		</script>
+	</head>
+
+	<body>
+		<div id="page" class="site">
+			<div id="content" class="site-content">
+				<div class="content-block history">
+					<div class="content-wrap small-wrap vert-spaced lined">
+						<div class="columns">
+							<div class="col third middled copy-col onScrollEnter">
+								<h3 class="chapter-headline">1919</h3>
+								<p class="chapter-copy s-text top-spaced">1919事件 </p>
+							</div>
+							<!-- .col -->
+							<div class="col two-thirds middled ui-col rel onScrollEnter">
+								<div class="chapter-image img imgfill"
+									style="background-image:url('images/FOTO1.jpg');"></div>
+								<div class="timeline-container circle-timelines">
+									<div class="fill-parent ui-timelines">
+										<svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 600 600"
+											style="enable-background:new 0 0 600 600;" xml:space="preserve">
+											<circle fill="none" stroke="#000000" stroke-miterlimit="10" cx="300"
+												cy="300" r="300" />
+										</svg>
+										<svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 600 600"
+											style="enable-background:new 0 0 600 600;" xml:space="preserve">
+											<circle fill="none" stroke="#000000" stroke-miterlimit="10" cx="300"
+												cy="300" r="300" />
+										</svg>
+									</div>
+									<!-- .ui-timelines -->
+									<div class="ui-chapters fill-parent">
+										<div class="ui-chapter current-chapter"> <span class="chapter-point"></span>
+											<span class="chapter-label">1919</span> </div>
+										<div class="ui-chapter"> <span class="chapter-point"></span> <span
+												class="chapter-label">1940</span> </div>
+										<div class="ui-chapter"> <span class="chapter-point"></span> <span
+												class="chapter-label">1942</span> </div>
+										<!--                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">1962</span> </div>-->
+										<!--                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">1963</span> </div>-->
+										<!--                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">1965</span> </div>-->
+										<!--                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">1977</span> </div>-->
+										<!--                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">1992</span> </div>-->
+										<!--                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">1997</span> </div>-->
+										<!--                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">2002</span> </div>-->
+										<!--                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">2006</span> </div>-->
+										<!--                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">2007</span> </div>-->
+										<!--                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">2009</span> </div>-->
+										<!--                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">2012</span> </div>-->
+										<!--                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">2013</span> </div>-->
+										<!--                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">2014</span> </div>-->
+										<!--                <div class="ui-chapter"> <span class="chapter-point"></span> <span class="chapter-label">2015</span> </div>-->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<script type='text/javascript' src='js/History.js?ver=4.4.2'></script>
+		<script type='text/javascript'>
+			/* <![CDATA[ */
+
+
+			var _history_data = [{
+					"title": "1919",
+					"copy": "1919事件",
+					"img": {
+						"src": "images\/FOTO1.jpg"
+					}
+				},
+				{
+					"title": "1940",
+					"copy": "1940事件",
+					"img": {
+						"src": "images\/1940-1000x668.jpg"
+					}
+				},
+				{
+					"title": "1942",
+					"copy": "1942事件",
+					"img": {
+						"src": "images\/1942-1000x670.jpg"
+					}
+				}
+			]
+			// {"title":"1962","copy":"1962事件","img":{"src":"images\/FOTO2-1000x677.jpg"}},
+			// {"title":"1963","copy":"1963事件","img":{"src":"images\/1963.jpg"}},
+			// {"title":"1965","copy":"1965事件","img":{"src":"images\/Foto5-1000x608.jpg"}},
+			// {"title":"1977","copy":"1997事件","img":{"src":"images\/foto6-1000x625.jpg"}},
+			// {"title":"1992","copy":"1992事件","img":{"src":"images\/foto8-1000x682.jpg"}},
+			// {"title":"1997","copy":"1997事件","img":{"src":"images\/foto9-1000x533.jpg"}},
+			// {"title":"2002","copy":"2002事件","img":{"src":"images\/foto10-1000x563.jpg"}},
+			// {"title":"2006","copy":"2006事件","img":{"src":"images\/foto11-1000x667.jpg"}},
+			// {"title":"2007","copy":"2007事件","img":{"src":"images\/2007-1000x801.jpg"}},
+			// {"title":"2009","copy":"2009事件","img":{"src":"images\/foto13_alternativehs_2009-1000x584.jpg"}},
+			// {"title":"2012","copy":"2012事件","img":{"src":"images\/foto14_AlternativeHair2011_Bundy_Bundy_ABH_9185-1000x665.jpg"}},
+			// {"title":"2013","copy":"2013事件","img":{"src":"images\/foto15.jpg"}},
+			// {"title":"2014","copy":"2014事件","img":{"src":"images\/foto16-1000x602.jpg"}},
+			// {"title":"2015","copy":"2015事件","img":{"src":"images\/foto17jpg-1000x667.jpg"}}];
+			/* ]]> */
+		</script>
+		<script type='text/javascript' src='js/page_about.js'></script>
+	</body>
+</html>
