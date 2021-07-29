@@ -1,4 +1,4 @@
-## Welcome to YSC's Github Page
+# Welcome to YSC's Github Page
 
 初来乍到，算是第一次参考教程在Github上搭建页面……
 
@@ -65,7 +65,7 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 ### Support or Contact
 
-_页面初始默认生成的_
+页面初始默认生成的
 
 如果对本页面有问题请查看[官方文档](https://docs.github.com/categories/github-pages-basics/)或者[联系以获取支持](https://support.github.com/contact)，我们将帮您解决问题。
 
@@ -73,6 +73,6 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 
 ### CONTACT ME
 
-_这个指的是联系我_
+这个指的是联系我
 
 -EMAIL:herryschalal@gmail.com

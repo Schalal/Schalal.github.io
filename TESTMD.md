@@ -11,7 +11,7 @@
 5. 运筹学中的写成C/C++形式的相关算法（可能有一定难度
 6. 算法分析与设计
 7. [学习 _GIS Algorithms_ _Ningchuan Xiao_ _GIST_](./GISAlgorithms_NingchuanXiao/00.md)
-8. [学习 _Spatial Statistics & Geostatistics_ _Yongwan Chun & Daniel A Griffith_ _GIST_](./SpatialStatisticsAndGeostatistics)
+8. [学习 _Spatial Statistics & Geostatistics_ _Yongwan Chun & Daniel A Griffith_ _GIST_](./SpatialStatisticsAndGeostatistics/00.md)
 9. Python地理处理，包括GeoPandas、PySAL这样的库包，补习arcpy、gdal/ogr
 10. Python深度学习（Keras...）
 11. 模式识别与机器学习，顺带数据挖掘
