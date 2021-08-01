@@ -13,11 +13,9 @@
 7. [学习 _GIS Algorithms_ _Ningchuan Xiao_ _GIST_](./GISAlgorithms_NingchuanXiao/00.md)
 8. [学习 _Spatial Statistics & Geostatistics_ _Yongwan Chun & Daniel A Griffith_ _GIST_](./SpatialStatisticsAndGeostatistics/00.md)
 9. Python地理处理，包括GeoPandas、PySAL这样的库包，补习arcpy、gdal/ogr
-10. Python深度学习（Keras...）
-11. 模式识别与机器学习，顺带数据挖掘
-12. Python爬虫
-13. Python自然语言处理
-14. GIS原理、空间数据库等基础知识回顾
-15. [计算几何](./ComputationalGeometry/00绪论.md)
+10. [数据挖掘（包含机器学习与深度学习）](./MR/00.md)
+11. Python自然语言处理与网络爬虫
+12. GIS原理、空间数据库等基础知识回顾
+13. [计算几何](./ComputationalGeometry/00绪论.md)
 
 ............
