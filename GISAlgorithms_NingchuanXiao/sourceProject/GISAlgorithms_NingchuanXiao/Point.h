@@ -28,7 +28,7 @@ public:
 	double getEuclideanDistance(Point);//返回与另一个点的欧氏距离
 	double getManhattanDistance(Point);//返回与另一个点的曼哈顿距离
 	double getGreatCircleDistance(Point);//返回球面上两点间的大地线距离
-	double getDistance2Segment(SimpleSegment);
+	//double getDistance2Segment(SimpleSegment);
 	double getDistance2Segment(Point, Point);
 };
 template <class T> double radian(T);

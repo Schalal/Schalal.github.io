@@ -1,4 +1,7 @@
 {
     "codeMap.ShowOrHide": "hide",
-    "codeMap.GraphMode": "NotSelect"
+    "codeMap.GraphMode": "NotSelect",
+    "[markdown]": {
+        "editor.quickSuggestions": true
+    }
 }

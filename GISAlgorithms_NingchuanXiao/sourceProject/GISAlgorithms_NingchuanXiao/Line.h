@@ -1,11 +1,12 @@
 #pragma once
-#include"Point.h"
+#include "Point.h"
 class SimpleSegment
 {
-private:
-	Point startPoint, endPoint;
-public:
-	SimpleSegment(Point, Point);
-	~SimpleSegment();
-	double getLength();
+//private:
+//	Point startPoint;
+//	Point endPoint;
+//public:
+//	SimpleSegment(Point, Point);
+//	~SimpleSegment();
+//	double getLength();
 };
