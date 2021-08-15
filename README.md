@@ -25,7 +25,8 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 
 ```markdown
 
-使用#以高亮语句块
+使用
+# 以高亮语句块
 
 Syntax highlighted code block
 
@@ -75,4 +76,4 @@ Having trouble with Pages? Check out our [documentation](https://docs.github.com
 
 这个指的是联系我
 
--EMAIL:herryschalal@gmail.com
+- EMAIL:herryschalal@gmail.com
