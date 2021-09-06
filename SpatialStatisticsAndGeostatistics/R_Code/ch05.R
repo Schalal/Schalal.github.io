@@ -259,7 +259,7 @@ summary(nb.ur)$coefficients[10,]
 nb.ur$deviance/nb.ur$df.residual
 
 
-# 地理流计算，以下没有细看
+# 地理流计算
 
 pr.j2w <- read.csv("PR_journey-to-work_2000.csv")
 

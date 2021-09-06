@@ -28,7 +28,7 @@ One technique producing such geographically varying coefficients requires the co
 
 这里提到的stepwise regression，就是逐步回归。逐步回归的基本思路是从大量可供选择的变量中选取最重要的变量，建立回归分析的预测或者解释模型。其基本思想是：将自变量逐个引人，引入的条件是其偏回归平方和经检验后是显著的。同时，每引人一个新的自变量后，要对旧的自变量逐个检验，剔除偏回归平方和不显著的自变量。这样一直边引入边剔除，直到既无新变量引人也无旧变量删除为止。它的实质是建立“最优”的多元线性回归方程。
 
-地理加权回归应当也属于此类局部模型，这里对地理加权回归（Geographical Weighted Regression）作一介绍，其形式为
+地理加权回归应当也属于此类局部模型，这里只不过使用的是Spatial Filter Eigenvector，这里对地理加权回归（Geographical Weighted Regression）作一介绍，其形式为
 
 $y_i=\beta_{i0}+\sum_{k=1}^p{\beta_{ik}x_{ik}}+\epsilon_{i}=\beta_{0}(u_i,v_i)+\sum_{k=1}^p{\beta_{k}(u_i,v_i)x_{ik}}+\epsilon_{i}$，其中$(u_i,v_i)$是第$i$个采样点的坐标，$\beta_{k}(u_i,v_i)$是第$i$个采样点的第$k$个回归参数，随机误差$\epsilon_{i}$满足iid。
 
