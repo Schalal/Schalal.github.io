@@ -13,7 +13,7 @@
 + 区域化变量：与空间坐标有关的随机场，记作$Z(x_u,x_v,x_w)$，简记为$Z(X)$。观测前认为区域化变量$Z(X)$是一个随机场；观测后区域化变量$Z(X)$就是一个普通的、与空间位置有关的多元空间函数。区域化变量有如下特点：
 
 
-|<div style="width:100px">性质</div>|说明|
+|性质|说明|
 |:----:|:----|
 |空间局限性|只在一定的空间范围内定义|
 |随机性|在空间上的分布具有随机性，即使相近的两点属性值也可能有较大差别|
@@ -61,7 +61,7 @@ $\gamma^*(h)=\frac{1}{2N(h)}\sum_{i=1}^{N(h)}{(Z(x)-Z(z+h))^2}$
 
 （2）点对云图计算法
 
-逐一计算任意两样本点之间的距离$h$和$\gamma^*(h)$，然后将对$(h,\gamma^*(h))$散点进行拟合。
+逐一计算任意两样本点之间的距离$h$和$\gamma^{*}(h)$，然后将对$(h,\gamma^{*}(h))$散点进行拟合。
 
 拟合方法：①选定某种模型（如最常用的是球状模型，可以是多层结构的叠加）；②参数拟合（如线性规划、遗传算法、加权多项式回归等方法）
 
@@ -138,9 +138,13 @@ Var(Z^*(x_0)-Z(x_0))\\
 =Cov(\sum\lambda_iZ(x_i),\sum\lambda_iZ(x_i))-2Cov(Z(x_0),\sum\lambda_iZ(x_i))+Cov(Z(x_0),Z(x_0))\\
 =\sum\sum\lambda_{i}\lambda_{j}Cov(Z(x_i),Z(x_j))-2\sum\lambda_iCov(Z(x_i),Z(x_0))+Cov(Z(x_0),Z(x_0))\\
 =\sum\sum\lambda_{i}\lambda_{j}C(i,j)-2\sum\lambda_iC(i,0)+C(0,0)\\
-=\sum\sum\lambda_{i}\lambda_{j}(\sigma^2-\gamma_{ij})-2\sum\lambda_i(\sigma^2-\gamma_{i0})+\sigma^2-\gamma_{00}（\gamma是变差函数）\\
-=-\sum\sum\lambda_{i}\lambda_{j}\gamma_{ij}+2\sum\lambda_i\gamma_{i0}-\gamma_{00}（利用\sum\lambda_i=1的性质）
-$
+=\sum\sum\lambda_{i}\lambda_{j}(\sigma^2-\gamma_{ij})-2\sum\lambda_i(\sigma^2-\gamma_{i0})+\sigma^2-\gamma_{00}$
+
+（$\gamma$是变差函数）
+
+$=-\sum\sum\lambda_{i}\lambda_{j}\gamma_{ij}+2\sum\lambda_i\gamma_{i0}-\gamma_{00}$
+
+（利用$\sum\lambda_i=1$的性质）
 
 即转换为有约束的最小值求解问题，使用拉格朗日乘子法求解系数$\lambda_i$即可
 

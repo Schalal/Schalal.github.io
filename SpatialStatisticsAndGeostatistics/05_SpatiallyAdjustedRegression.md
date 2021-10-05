@@ -6,19 +6,19 @@ Classical statistics attaches a probability distribution to the residuals of pre
 
 SAR, simultaneous autoregression:
 
-$Y=\rho\bold{W}Y+(\bold{I}-\rho\bold{W})\bold{X}\pmb{\beta}+\pmb{\epsilon}$
+$Y=\rho\pmb{W}Y+(\pmb{I}-\rho\pmb{W})\pmb{X}\pmb{\beta}+\pmb{\epsilon}$
 
 where:
 
-+ $\bold{W}$ is the row standardized spatial weight matrix, also called row standardized geographic connectivity matrix;
-+ $\bold{I}$ is an $n*n$ identity matrix;
++ $\pmb{W}$ is the row standardized spatial weight matrix, also called row standardized geographic connectivity matrix;
++ $\pmb{I}$ is an $n*n$ identity matrix;
 + $\rho$ is the spatial autocorrelation parameter;
 + $\pmb{\beta}$ is a $(P+1)*1$ vector of regression coefficients (including the intercept term);
-+ $\pmb{\epsilon}$ is an $n*1$ vector of iid $N(0,\sigma^2)$, which can be written in matrix form as the multivariate normal distribution $MVN(\bold{0},\bold{I}\sigma^2)$
++ $\pmb{\epsilon}$ is an $n*1$ vector of iid $N(0,\sigma^2)$, which can be written in matrix form as the multivariate normal distribution $MVN(\pmb{0},\pmb{I}\sigma^2)$
 
-If considering $\epsilon$ in the standard linear regression model $Y=\bold{X}\pmb{\beta}+\epsilon$ is spatial auto-related, then the model can be written as $Y=\bold{X}\pmb{\beta}+(\bold{I}-\rho\bold{W})^{-1}\epsilon$, and the spatial regression equation can be written as:
+If considering $\epsilon$ in the standard linear regression model $Y=\pmb{X}\pmb{\beta}+\epsilon$ is spatial auto-related, then the model can be written as $Y=\pmb{X}\pmb{\beta}+(\pmb{I}-\rho\pmb{W})^{-1}\epsilon$, and the spatial regression equation can be written as:
 
-$Y=\bold{X}\pmb{\beta}+[\rho\bold{W}(Y-\bold{X}\pmb{\beta})+\pmb{\epsilon}]=\bold{X}\pmb{\beta}+\xi$
+$Y=\pmb{X}\pmb{\beta}+[\rho\pmb{W}(Y-\pmb{X}\pmb{\beta})+\pmb{\epsilon}]=\pmb{X}\pmb{\beta}+\xi$
 
 然后本节内容就是对回归方程的近似估计（使用权重阵的特征值）和应用场景了。以下是根据《空间数据分析》一书的补充内容（虽然二者对空间回归方程的一般形式的定义有区别但本质上都是一致的）。
 
@@ -71,7 +71,7 @@ In the preceding section, implementation of spatial autoregressive models requir
 
 **Eigenvector spatial filtering** furnishes a sound methodology for estimating non-normal probability models with georeferenced data containing non-zero spatial autocorrelation. This methodology accounts for spatial autocorrelation in random variables by incorporating heterogeneity into parameters in order to model non-homogeneous populations. It renders a mixture of distributions that can be used to model observed georeferenced data whose various characteristics differ from those that are consistent with a single, simple, underlying distribution with constant parameters across all observations. The aim of this technique is to capture spatial autocorrelation effects with a linear combination of spatial proxy variables – namely, eigenvectors – rather than to identify a global spatial autocorrelation parameter governing average direct pairwise correlations between selected observed values. As such, it utilizes the misspecification interpretation of spatial autocorrelation, which assumes that spatial autocorrelation is induced by missing exogenous variables, which themselves are spatially autocorrelated, and hence relates to heterogeneity.
 
-Eigenvector spatial filtering conceptualizes **spatial dependency** as common factor that is a linear combination of synthetic variates （the eigenvector of the matrix $\bold{(I-11^T/n)C(I-11^T/n)}$） summarizing distinct features of the neighbors' geographic configuration structure for a given georeferenced dataset.
+Eigenvector spatial filtering conceptualizes **spatial dependency** as common factor that is a linear combination of synthetic variates （the eigenvector of the matrix $\pmb{(I-11^T/n)C(I-11^T/n)}$） summarizing distinct features of the neighbors' geographic configuration structure for a given georeferenced dataset.
 
 + Binominal/Logistic regression
 + Poisson/negative binominal regression
