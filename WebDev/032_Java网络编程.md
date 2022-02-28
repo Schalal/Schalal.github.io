@@ -190,7 +190,7 @@ public class GreetingServer extends Thread
 
 编译以上 java 代码，并执行以下命令来启动服务，使用端口号为 6066：
 
-```
+```shell
 $ java GreetingServer 6066
 Waiting for client on port 6066...
 像下面一样开启客户端：
