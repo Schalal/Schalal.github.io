@@ -4,7 +4,7 @@
 2. [Qt/PyQt](./Qt/00.md)
 3. [Web Dev](./WebDev/00.md)
 4. [Operations Research]()
-5. [_GIS Algorithms_ _Ningchuan Xiao_ _GIST_](./GISAlgorithms_NingchuanXiao/00.md)
+5. [_GIS Algorithms_](./GISAlgorithms/00.md)
 6. [_Spatial Statistics & Geostatistics_ _Yongwan Chun & Daniel A Griffith_ _GIST_](./SpatialStatisticsAndGeostatistics/00.md)
 7. [Python GeoProcessing](./PythonGeo/00.md)
 8.  [Data Mining & Spatial Data Mining](./ML/00.md)

@@ -1,0 +1,7 @@
+﻿  Line.cpp
+  main.cpp
+  Point.cpp
+C:\Users\15239\Documents\GitHub\Schalal.github.io\GISAlgorithms_NingchuanXiao\sourceProject\GISAlgorithms_NingchuanXiao\Point.cpp(25,16): warning C4244: “return”: 从“double”转换到“int”，可能丢失数据
+C:\Users\15239\Documents\GitHub\Schalal.github.io\GISAlgorithms_NingchuanXiao\sourceProject\GISAlgorithms_NingchuanXiao\Point.cpp(26,16): warning C4244: “return”: 从“double”转换到“int”，可能丢失数据
+  正在生成代码...
+  GISAlgorithms_NingchuanXiao.vcxproj -> C:\Users\15239\Documents\GitHub\Schalal.github.io\GISAlgorithms_NingchuanXiao\sourceProject\GISAlgorithms_NingchuanXiao\Debug\GISAlgorithms_NingchuanXiao.exe
