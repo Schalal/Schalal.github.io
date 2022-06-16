@@ -2,6 +2,10 @@
     "codeMap.ShowOrHide": "hide",
     "codeMap.GraphMode": "NotSelect",
     "[markdown]": {
-        "editor.quickSuggestions": true
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        }
     }
 }
