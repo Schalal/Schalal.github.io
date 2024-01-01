@@ -6,9 +6,9 @@
 
 典型案例：购物篮分析
 
-设$\Tau=\{I_1,I_2,...,I_m\}$是项（item）的集合，设任务相关的数据D是数据库事务的集合，其中每个事务$\tau$是一个非空项的集合，使得$\tau\subseteq\Tau$。设A是一个项集，当且仅当$A\subseteq\tau$时，称事务$\tau$包含A。
+设$$\Tau=\{I_1,I_2,...,I_m\}$$是项（item）的集合，设任务相关的数据D是数据库事务的集合，其中每个事务$$\tau$$是一个非空项的集合，使得$$\tau\subseteq\Tau$$。设A是一个项集，当且仅当$$A\subseteq\tau$$时，称事务$$\tau$$包含A。
 
-关联规则是形如$A\Rightarrow{B}$的蕴含式，其中$A\subset\Tau,B\subset\Tau,A\not ={\emptyset},B\not ={\emptyset},且A\bigcap{B}=\emptyset$。规则$A\Rightarrow{B}$在事务集$D$中成立，具有支持度$support(A\Rightarrow{B})=P(A\bigcup{B})$，具有置信度$confidence(\Rightarrow{B})=P(B|A)=\frac{support(A\bigcup{B})}{support(A)}$，同时满足最小支持度阈值和最小置信度阈值的规则称为强规则。
+关联规则是形如$$A\Rightarrow{B}$$的蕴含式，其中$$A\subset\Tau,B\subset\Tau,A\not ={\emptyset},B\not ={\emptyset},且A\bigcap{B}=\emptyset$$。规则$$A\Rightarrow{B}$$在事务集$$D$$中成立，具有支持度$$support(A\Rightarrow{B})=P(A\bigcup{B})$$，具有置信度$$confidence(\Rightarrow{B})=P(B|A)=\frac{support(A\bigcup{B})}{support(A)}$$，同时满足最小支持度阈值和最小置信度阈值的规则称为强规则。
 
 项的集合称为项集，包含k个项的集合称为k项集，项集出现的频度是包含项集的事务数，简称为项集的频度/支持度计数/计数，如果项集I的相对支持度满足最小支持度阈值，则I是频繁项集。
 
@@ -21,24 +21,24 @@
 
 项集X是数据集D的闭频繁项集，如果X在D中是闭的和频繁的。
 
-项集X是数据集D的极大频繁项集/极大项集，如果X在D中是频繁的，且不存在超项集Y使得$X\subset{Y}$并且Y在D中是频繁的。
+项集X是数据集D的极大频繁项集/极大项集，如果X在D中是频繁的，且不存在超项集Y使得$$X\subset{Y}$$并且Y在D中是频繁的。
 
 ## 6.2 频繁项集挖掘方法
 
 ### 6.2.1 Apriori算法
 
-Apriori算法是Agrawal和R.Srikant于1994年提出的为布尔关联规则挖掘频繁项集的算法，算法使用频繁项集的先验知识（频繁项集的所有非空子集也一定是频繁的，基于这个先验性质通过**连接步和剪枝步**即可通过$L_{k-1}$找出$L_k$），使用一种逐层搜索的迭代方法，使用k项集探索k+1项集。
+Apriori算法是Agrawal和R.Srikant于1994年提出的为布尔关联规则挖掘频繁项集的算法，算法使用频繁项集的先验知识（频繁项集的所有非空子集也一定是频繁的，基于这个先验性质通过**连接步和剪枝步**即可通过$$L_{k-1}$$找出$$L_k$$），使用一种逐层搜索的迭代方法，使用k项集探索k+1项集。
 
-首先，通过扫描数据库累计每个项的计数并收集满足最小支持度的项，得到频繁1项集的集合，记作$L_1$，继而寻找$L_2, L_3$，直至不能再找到频繁k项集。
+首先，通过扫描数据库累计每个项的计数并收集满足最小支持度的项，得到频繁1项集的集合，记作$$L_1$$，继而寻找$$L_2, L_3$$，直至不能再找到频繁k项集。
 
-连接步：$L_k=L_{k-1}\triangleright\triangleleft{L_{k-1}}$，称执行连接步骤后的k项集集合为候选集，记为$C_k$。设$l_1$和$l_2$是$L_{k-1}$中的项集，且项集元素已经是升序排列的，若$l_1$和$l_2$的前$k-2$个元素都相同，则称$l_1$和$l_2$是可连接的，得到的新项集$\{l_1[1],l_1[2],...,l_1[k-1],l_2[k-1]\}$。
+连接步：$$L_k=L_{k-1}\triangleright\triangleleft{L_{k-1}}$$，称执行连接步骤后的k项集集合为候选集，记为$$C_k$$。设$$l_1$$和$$l_2$$是$$L_{k-1}$$中的项集，且项集元素已经是升序排列的，若$$l_1$$和$$l_2$$的前$$k-2$$个元素都相同，则称$$l_1$$和$$l_2$$是可连接的，得到的新项集$$\{l_1[1],l_1[2],...,l_1[k-1],l_2[k-1]\}$$。
 
-剪枝步：$C_k$是$L_k$的超集，其中有些集合可能是不频繁的，所以需要再次扫描数据库，确定$C_k$中每个候选的计数，从而确定$L_k$。进行此步骤可以利用如下的先验性质：任何非频繁的(k-1)项集都不是频繁k项集的子集，因此可以先删除非频繁的(k-1)项子集。
+剪枝步：$$C_k$$是$$L_k$$的超集，其中有些集合可能是不频繁的，所以需要再次扫描数据库，确定$$C_k$$中每个候选的计数，从而确定$$L_k$$。进行此步骤可以利用如下的先验性质：任何非频繁的(k-1)项集都不是频繁k项集的子集，因此可以先删除非频繁的(k-1)项子集。
 
 ### 6.2.2 由频繁项集产生关联规则
 
-+ 对于每个频繁项集$l$，产生$l$的所有非空子集
-+ 对于$l$的每个非空子集$s$，若$confidence(s\Rightarrow{l-s})\geqslant{min\_conf}$，则有规则"$s\Rightarrow{l-s}$"
++ 对于每个频繁项集$$l$$，产生$$l$$的所有非空子集
++ 对于$$l$$的每个非空子集$$s$$，若$$confidence(s\Rightarrow{l-s})\geqslant{min\_conf}$$，则有规则"$$s\Rightarrow{l-s}$$"
 
 ### 6.2.3 提高Apriori算法的效率
 
@@ -57,7 +57,7 @@ Apriori算法是Agrawal和R.Srikant于1994年提出的为布尔关联规则挖�
 
 ### 6.2.5 垂直数据格式
 
-{$\tau{ID}:item$}的格式称为水平数据格式，{item:$\tau{ID}$}的格式称为垂直数据格式。
+{$$\tau{ID}:item$$}的格式称为水平数据格式，{item:$$\tau{ID}$$}的格式称为垂直数据格式。
 
 ### 6.2.6 挖掘闭模式和极大模式
 
@@ -69,19 +69,19 @@ Apriori算法是Agrawal和R.Srikant于1994年提出的为布尔关联规则挖�
 
 ### 6.3.2 从关联分析到相关分析
 
-相关规则（correlation rule）：$A\Rightarrow{B}[support,confidence,correlation]$
+相关规则（correlation rule）：$$A\Rightarrow{B}[support,confidence,correlation]$$
 
 相关性度量：
 
 |度量指标|说明|
 |:----:|:----|
-|提升度<br>$lift(A,B)=\frac{P(A\bigcup{B})}{P(A)P(B)}$|检测A和B之间是否是独立的（lift=1）|
-|$\chi^2$||
-|全置信度<br>$all\_conf(A,B)=\frac{support(A\bigcup{B})}{max{support{A},support{B}}}=min\{P(A|B),P(B|A)\}$|即最小置信度|
-|最大置信度<br>$max\{P(A\|B),P(B\|A)\}$||
-|$Kulc(A,B)=\frac{1}{2}(P(A\|B),P(B\|A))$|算数均值|
-|$cosine(A,B)=\frac{P(A\bigcup{B})}{\sqrt{P(A)\times{P(B)}}}=\sqrt{P(A\|B)\times{P(B\|A)}}$|几何均值|
+|提升度<br>$$lift(A,B)=\frac{P(A\bigcup{B})}{P(A)P(B)}$$|检测A和B之间是否是独立的（lift=1）|
+|$$\chi^2$$||
+|全置信度<br>$$all\_conf(A,B)=\frac{support(A\bigcup{B})}{max{support{A},support{B}}}=min\{P(A|B),P(B|A)\}$$|即最小置信度|
+|最大置信度<br>$$max\{P(A\|B),P(B\|A)\}$$||
+|$$Kulc(A,B)=\frac{1}{2}(P(A\|B),P(B\|A))$$|算数均值|
+|$$cosine(A,B)=\frac{P(A\bigcup{B})}{\sqrt{P(A)\times{P(B)}}}=\sqrt{P(A\|B)\times{P(B\|A)}}$$|几何均值|
 
 零事务：不包含任何考察项集的事务。如果一种度量不受零事务的影响，则称这种度量是零不变的（null-invariant）。
 
-不平衡比：$IR=\frac{|support(A)-support(B)|}{support(A)+support(B)-support(A\bigcup{B})}$
+不平衡比：$$IR=\frac{|support(A)-support(B)|}{support(A)+support(B)-support(A\bigcup{B})}$$

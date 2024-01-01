@@ -24,11 +24,11 @@ Differentiation between sample designs require the drawing of multiple samples.
 
 A set of simulation experiments utilizing pseudorandom number generators and involving 10000 replications exploits the law of large numbers, and furnishes criteria for differentiating between the designs.
 
-three designed landscape types, where $(U,V)$ is the coordinates:
+three designed landscape types, where $$(U,V)$$ is the coordinates:
 
-+ linear geographic trend: $Z=U+V$
-+ quadratic type of trend: $Z=e^{-[(U-0.5)^2+(V-0.5)^2]/2}$
-+ oscillating type of trend: $Z=sin(5U\pi)+sin(4V\pi)$
++ linear geographic trend: $$Z=U+V$$
++ quadratic type of trend: $$Z=e^{-[(U-0.5)^2+(V-0.5)^2]/2}$$
++ oscillating type of trend: $$Z=sin(5U\pi)+sin(4V\pi)$$
 
 two simulation experiments sets (two sample tessellation types):
 
@@ -47,8 +47,8 @@ two popular resample techniques:
 
 |Name|Description|Notes|
 |:----:|:----|:----|
-|bootstrap|The bootstrap involves constructing a sample sampling distribution with replicate samples by random sampling with replacement from a single selected sample, using a sample of size $n$.|通俗来讲，就是在不知道样本分布状态的前提下，生成一系列基于样本bootstrap伪样本，每个伪样本是初始数据有放回等数量抽样。通过对n个伪样本的计算，获得相关统计量。不适用于镶嵌分层抽样。在确定抽样样本个数后，这种方法的重抽样样本个数仍是不确定的（因为不确定抽多少次）。|
-|jack-knife|The jack-knife involves constructing a sample sampling distribution by systematically leaving out $k$ observations at a time from a selected sample, and recomputing a given statistic with the remaining sample size of $n-k$.|即，在抽样样本的基础上去除$k$个样本，生成新的样本集合，如假设抽样样本集共有$n$个样本，则去除1个，得到$n$个子样本构成的样本集合；去除2个，得到$\frac{n(n-1)}{2}$个子样本构成的样本集合；去除3个，得到$\frac{n(n-1)(n-2)}{6}$个子样本构成的样本集合，可以用于对偏差（bias）和标准差（standard error）的估计，在进行一些非线性统计量的计算的时候，可能还需要进行一些转换。在确定去除个数后，这种方法的重抽样样本个数是确定的。|
+|bootstrap|The bootstrap involves constructing a sample sampling distribution with replicate samples by random sampling with replacement from a single selected sample, using a sample of size $$n$$.|通俗来讲，就是在不知道样本分布状态的前提下，生成一系列基于样本bootstrap伪样本，每个伪样本是初始数据有放回等数量抽样。通过对n个伪样本的计算，获得相关统计量。不适用于镶嵌分层抽样。在确定抽样样本个数后，这种方法的重抽样样本个数仍是不确定的（因为不确定抽多少次）。|
+|jack-knife|The jack-knife involves constructing a sample sampling distribution by systematically leaving out $$k$$ observations at a time from a selected sample, and recomputing a given statistic with the remaining sample size of $$n-k$$.|即，在抽样样本的基础上去除$$k$$个样本，生成新的样本集合，如假设抽样样本集共有$$n$$个样本，则去除1个，得到$$n$$个子样本构成的样本集合；去除2个，得到$$\frac{n(n-1)}{2}$$个子样本构成的样本集合；去除3个，得到$$\frac{n(n-1)(n-2)}{6}$$个子样本构成的样本集合，可以用于对偏差（bias）和标准差（standard error）的估计，在进行一些非线性统计量的计算的时候，可能还需要进行一些转换。在确定去除个数后，这种方法的重抽样样本个数是确定的。|
 
 ## 3.5 Spatial autocorrelation and effective sample size
 

@@ -25,7 +25,7 @@ React鼓励使用声明式编程而非命令式编程，开发人员要声明组
 
 React的虚拟DOM由React的元素组成，React元素是React中轻量、无状态、不可变的基类，有ReactComponentElement和ReactDOMElement两种类型，前者对应React组件的一个函数或类，后者是DOM元素的虚拟表示。
 
-虚拟DOM由ReactElement组成$\iff$DOM由DOMElement组成
+虚拟DOM由ReactElement组成$$\iff$$DOM由DOMElement组成
 
 React元素---->React---->虚拟DOM---->React DOM---->实际DOM
 

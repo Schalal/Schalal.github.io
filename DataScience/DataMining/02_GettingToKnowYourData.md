@@ -42,20 +42,20 @@
 
 |数据类型|数据邻近度度量方式|参数说明|
 |:----:|:----:|:----:|
-|nominal|$d(i,j)=\frac{p-m}{p}$|$m$是名义属性值一致的属性数目，$p$是属性总数目|
-|bool|$d(i,j)=\frac{r+s}{q+r+s}$|bool属性即取值只能为0或1的属性，q表示对象i和对象j属性均为1数目，r表示在对象i中取值为1而在对象j中取值为0的属性数目，s表示在对象i中取值为0而在对象j中取值为1的属性数目，t表示在对象i和对象j中取值都为0的属性数目（常常被忽略），$sim(i,j)=1-d(i,j)$常被称作Jaccard系数|
+|nominal|$$d(i,j)=\frac{p-m}{p}$$|$$m$$是名义属性值一致的属性数目，$$p$$是属性总数目|
+|bool|$$d(i,j)=\frac{r+s}{q+r+s}$$|bool属性即取值只能为0或1的属性，q表示对象i和对象j属性均为1数目，r表示在对象i中取值为1而在对象j中取值为0的属性数目，s表示在对象i中取值为0而在对象j中取值为1的属性数目，t表示在对象i和对象j中取值都为0的属性数目（常常被忽略），$$sim(i,j)=1-d(i,j)$$常被称作Jaccard系数|
 |numeric|Minkowski Distance等各种形式的距离表达||
-|ordinal|先次序数值化$z_{if}=\frac{r_{if}-1}{M_f-1}$，再针对$z_{if}$的距离度量|这只是一种数值化次序的一种方式，数值化后的值域为\[0,1\],$r_{if}\in\{1,2,3,...,M_f\}$，即对象i某次序属性的次序|
-|混合距离|$d(i,j)=\frac{\sum_{f=1}^{p}{\delta_{ij}^{(f)}d_{ij}^{(f)}}}{\sum_{f=1}^{p}{\delta_{ij}^{(f)}}}$|如果对象i或对象j某一属性值缺失，则$\delta_{ij}^{f}=0$，否则$\delta_{ij}^{f}=1$，$d_{ij}^{f}就是对象属性的对应距离$|
+|ordinal|先次序数值化$$z_{if}=\frac{r_{if}-1}{M_f-1}$$，再针对$$z_{if}$$的距离度量|这只是一种数值化次序的一种方式，数值化后的值域为\[0,1\],$$r_{if}\in\{1,2,3,...,M_f\}$$，即对象i某次序属性的次序|
+|混合距离|$$d(i,j)=\frac{\sum_{f=1}^{p}{\delta_{ij}^{(f)}d_{ij}^{(f)}}}{\sum_{f=1}^{p}{\delta_{ij}^{(f)}}}$$|如果对象i或对象j某一属性值缺失，则$$\delta_{ij}^{f}=0$$，否则$$\delta_{ij}^{f}=1$$，$$d_{ij}^{f}就是对象属性的对应距离$$|
 
 + Cosine Similarity
 
 常用来衡量类似于词频向量（term-frequency vector）这样的数据的相似度，衡量的向量通常有很多个维度而且是稀疏的（有许多0值）。
 
-$sim(\vec{x},\vec{y})=\frac{\vec{x}\cdot\vec{y}}{|\vec{x}||\vec{y}|}=cos<\vec{x},\vec{y}>$
+$$sim(\vec{x},\vec{y})=\frac{\vec{x}\cdot\vec{y}}{|\vec{x}||\vec{y}|}=cos<\vec{x},\vec{y}>$$
 
-当属性是二值属性时，如果$x_i=1$，则称对象$x$具有第i个属性，此时$\vec{x}\cdot\vec{y}$表示对象$x$和对象$y$共同具有的属性数，则余弦相似度的一个常用变体为：
+当属性是二值属性时，如果$$x_i=1$$，则称对象$$x$$具有第i个属性，此时$$\vec{x}\cdot\vec{y}$$表示对象$$x$$和对象$$y$$共同具有的属性数，则余弦相似度的一个常用变体为：
 
-$sim(\vec{x},\vec{y})=\frac{\vec{x}\cdot\vec{y}}{\vec{x}\cdot\vec{x}+\vec{y}\cdot\vec{y}-\vec{x}\cdot\vec{y}}$
+$$sim(\vec{x},\vec{y})=\frac{\vec{x}\cdot\vec{y}}{\vec{x}\cdot\vec{x}+\vec{y}\cdot\vec{y}-\vec{x}\cdot\vec{y}}$$
 
 即交集属性个数和并集属性个数的比例，称为Tanimono系数。
