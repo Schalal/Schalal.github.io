@@ -3,3 +3,4 @@
 3. [Geo-Processing in Python](./PythonGeo/00.md)
 4. [Spatial Statistics and Geostatistics](./SSGS/00.md)
 5. [复杂系统视角下的城市科学](./USCN/00.md)
+6. [IDEA INTERN](./IDEA/00.md)
