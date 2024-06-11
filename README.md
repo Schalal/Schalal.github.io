@@ -4,9 +4,9 @@
 
 Shuaichen Yan, WHU & PKU, GIS
 
-### BLOGS
+### Notes
 
-[BLOGS](./Content.md)
+[Notes](./Content.md)
 
 ### CONTACT ME
 
