@@ -95,8 +95,7 @@ sass:
 
 
 # Outputting
-permalink: /
-index: README.md
+permalink: /:categories/:title/
 timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
