@@ -6,7 +6,7 @@ Shuaichen Yan, WHU & PKU, GIS
 
 ### BLOGS
 
-[BLOGS](./Content)
+[BLOGS](./Content.md)
 
 ### CONTACT ME
 

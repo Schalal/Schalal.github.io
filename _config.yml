@@ -1,125 +1,43 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve -l -H localhost`. If you change this file, please restart the 
-# server process.
-
-# Basic Site Settings
 locale                   : "zh-CN"
 title                    : "Shuaichen Yan / Chronicles of Learning and Research"
-title_separator          : "-"
-name                     : &name "Shuaichen Yan"
-description              : &description " Chronicles of Learning and Research"
-url                      : "https://schalal.github.io/"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "https://github.com/Schalal/Schalal.github.io"
+# title_separator          : "-"
+# name                     : &name "Shuaichen Yan"
+# description              : &description " Chronicles of Learning and Research"
+# url                      : "https://schalal.github.io/"
+# baseurl                  : "" # the subpath of your site, e.g. "/blog"
+# repository               : "https://github.com/Schalal/Schalal.github.io"
 
-# Site Author - The following control what appear as part of the author content on the side bar.
-#               If a field is blank the icon and link will not appear, otherwise it will be shown.
-#               Additional customization can be done by editing /_includes/author-profile.html
-author:
-  # Biographic information
-  avatar           : "profile.png"
-  name             : "Shuaichen Yan"
-  bio              : "I am currently a Master's student majoring in Geography (Urban Planning and Design) at Peking University, and I hold a Bachelor's degree in Geographic Information Science from Wuhan University."
-  location         : "Shenzhen, China"
-  employer         : "Peking University"
-  uri              : "https://schalal.github.io/"
-  email            : "shchyan@stu.pku.edu.cn" 
+# # Site Author - The following control what appear as part of the author content on the side bar.
+# #               If a field is blank the icon and link will not appear, otherwise it will be shown.
+# #               Additional customization can be done by editing /_includes/author-profile.html
+# author:
+#   # Biographic information
+#   avatar           : "profile.png"
+#   name             : "Shuaichen Yan"
+#   bio              : "I am currently a Master's student majoring in Geography (Urban Planning and Design) at Peking University, and I hold a Bachelor's degree in Geographic Information Science from Wuhan University."
+#   location         : "Shenzhen, China"
+#   employer         : "Peking University"
+#   uri              : "https://schalal.github.io/"
+#   email            : "shchyan@stu.pku.edu.cn" 
 
-  # Academic websites
-  # arxiv            : # URL - Update with the correct link to your profile
-  # googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-  # impactstory      : # URL
-  # orcid            : "http://orcid.org/yourorcidurl"
-  # semantic         : # URL
-  # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  researchgate     : "https://www.researchgate.net/profile/Shuaichen-Yan"
+#   # Academic websites
+#   # arxiv            : # URL - Update with the correct link to your profile
+#   # googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+#   # impactstory      : # URL
+#   # orcid            : "http://orcid.org/yourorcidurl"
+#   # semantic         : # URL
+#   # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+#   researchgate     : "https://www.researchgate.net/profile/Shuaichen-Yan"
 
-  # Repositories and software development
-  github           : "https://github.com/Schalal"
-  stackoverflow    : "https://gis.stackexchange.com/users/177752/shchyan"    
+#   # Repositories and software development
+#   github           : "https://github.com/Schalal"
+#   stackoverflow    : "https://gis.stackexchange.com/users/177752/shchyan"    
 
-# Reading Files
-include:
-  - .htaccess
-  - _pages
-  - files
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
-  - .github
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/_main.js
-  - assets/js/plugins
-  - assets/js/vendor
-  - CHANGELOG
-  - Capfile
-  - config
-  - Dockerfile
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - local
-  - log
-  - node_modules
-  - package.json*
-  - Rakefile
-  - README
-  - tmp
-  - vendor
-keep_files:
-  - .git
-  - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+# sass:
+#   sass_dir: _sass
+#   style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
 
-
-# Conversion
-markdown: kramdown
-highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
-
-# Sass/SCSS
-sass:
-  sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
-
-# Outputting
-permalink: /:categories/:title/
-timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
-
-# Plugins
-plugins:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jemoji
-
-# Mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jemoji
-
-# HTML Compression
-# - http://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
+# permalink: /:categories/:title/
+# timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 google_analytics: G-HK5VGXCJTG
