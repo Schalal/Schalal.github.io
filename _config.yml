@@ -1,2 +1,4 @@
 locale: "zh-CN"
+markdown: kramdown
+math: true
 google_analytics: G-HK5VGXCJTG

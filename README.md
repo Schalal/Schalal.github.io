@@ -6,21 +6,27 @@ I am currently a Master's student majoring in Geography (Urban Planning and Desi
 
 ### Blogs
 
-I share my learning experiences through my blogs. Feel free to explore my thoughts on various topics related to GIS, computer science and statistics.  
+I share my learning experiences through my blogs.
+
+Welcome to explore my thoughts on various topics related to GIScience, computer science and statistics.  
+
 [BLOGS](./Content.md)
 
 ### Galleries
 
-I also showcase my projects and research work through visual galleries. These include maps, data visualizations, and other graphical representations of my studies and findings.[GALLERY](./Gallery.md)
+I also showcase my projects and research work through visual galleries. These include maps, data visualizations, and other graphical representations of my studies and findings.
+
+[GALLERY](./Gallery.md)
 
 ### Contact Me
 
-I am always open to collaborations, discussions, and networking opportunities. Feel free to reach out to me via the following channels:
+Welcome to reach out to me via the following channels:
 
 - **Email**: [herryschalal@gmail.com](mailto:herryschalal@gmail.com) or [shchyan@stu.pku.edu.cn](mailto:shchyan@stu.pku.edu.cn)
 - **ResearchGate**: [Shuaichen Yan](https://www.researchgate.net/profile/Shuaichen-Yan)
 - **GitHub**: [Schalal](https://github.com/Schalal)
-- **Stack Overflow**: [Shuai Chen on GIS Stack Exchange](https://gis.stackexchange.com/users/177752/shchyan)
+- **Stack Overflow**: [Shuaichen Yan on GIS Stack Exchange](https://gis.stackexchange.com/users/177752/shchyan)
 
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <span id="busuanzi_container_site_pv">Number of Views: <span id="busuanzi_value_site_pv"></span>, </span>
 <span id="busuanzi_container_site_uv">Number of Visitors: <span id="busuanzi_value_site_uv"></span></span>
