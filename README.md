@@ -27,6 +27,5 @@ Welcome to reach out to me via the following channels:
 - **GitHub**: [Schalal](https://github.com/Schalal)
 - **Stack Overflow**: [Shuaichen Yan on GIS Stack Exchange](https://gis.stackexchange.com/users/177752/shchyan)
 
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <span id="busuanzi_container_site_pv">Number of Views: <span id="busuanzi_value_site_pv"></span>, </span>
 <span id="busuanzi_container_site_uv">Number of Visitors: <span id="busuanzi_value_site_uv"></span></span>
