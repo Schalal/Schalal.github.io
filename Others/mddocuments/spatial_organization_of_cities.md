@@ -100,7 +100,7 @@ The idea that only a few parameters are actually relevant for describing the mac
 对于城市建模存在着两种流派：
 
 + 城市经济学以很少的参数进行建模，但通常与实证数据联系较弱。与真实世界的联系通常是通过典型化事实（stylized facts），预测及与实证数据进行定量化对比相对缺乏。
-+ 基于agent的模拟通常需要很多的参数详细描述城市之间各种变量之间的关系，如土地-交通集成模型（landuse-transport integrated model, LUTIM）就是一种典型的此类模型。对数据的拟合程度较好，但其有效性难以验证，且当系统发生非轻微（non-negligible）的、未预期的扰动的时候我们对其预测结果的信心也是难以清晰说明的。
++ 基于agent的模拟通常需要很多的参数详细描述城市之间各种变量之间的关系，如土地-交通一体化模型（landuse-transport integrated model, LUTIM）就是一种典型的此类模型。对数据的拟合程度较好，但其有效性难以验证，且当系统发生非轻微（non-negligible）的、未预期的扰动的时候我们对其预测结果的信心也是难以清晰说明的。
 
 在一般的复杂系统中参数的量同样有着类似的问题：
 
@@ -112,8 +112,6 @@ The idea that only a few parameters are actually relevant for describing the mac
 物理学家通常先以最少量的参数提出模型，然后通过实证观察来校核模型，通过添加参数或提出新的机理来修正模型，但这种方式在LUTI类模型中是不适用的。原因是这类模型中的参数量过于巨大，以至于难以评估各个参数之间的相关性，有如此多参数的模型基本可以视作黑箱（black box）模型，以至于其对现实现象的不错效果与其说是解释，不如说是过拟合。
 
 此外，物理学家构建模型不依恋于（never clung to）预先存在的工具，而是通过现象来调整数学工具。但在城市经济学中，源自优化理论和近些年来交通优化理论的数学工具可能反而成为他们对现实描述的适应的障碍。如McCall的job search理论就是一个例子。
-
-【笔者评价：话很刻薄。】
 
 ### 城市经济学基本准则
 
@@ -145,7 +143,7 @@ The idea that only a few parameters are actually relevant for describing the mac
 
 $$Y=z+C_R(x)+T(x)$$
 
-其中$Y$是收入，$C_R(x)$和$T(x)$是区位的租金成本和交通成本，$z$代表其他成本（composite commodities）。假设单位面积的租金$R(x)$依赖区位$x$，$C_R(x)=R(x)s(x)$。假设交通成本只与距区位中心的距离有关，$T(x)=V|x|/v$，其中$V$为单位时间成本，$v$为交通模式的平均速度。城市经济学中，标准假设是优化效用最大化，效用函数只与$s$和$z$有关：
+其中$Y$是收入，$C_R(x)$和$T(x)$是区位的租金成本和交通成本，$z$代表其他成本（composite commodities）。假设单位面积的租金$R(x)$依赖区位$x$，$C_R(x)=R(x)s(x)$。假设交通成本只与距区位中心的距离有关，$T(x)=V\mid x\mid/v$，其中$V$为单位时间成本，$v$为交通模式的平均速度。城市经济学中，标准假设是优化效用最大化，效用函数只与$s$和$z$有关：
 
 $U=U(z,s)$
 
@@ -222,7 +220,7 @@ The locations of homes, activities, and businesses shape a city, and identifying
 如机场、邮局、医院等公用设施依据局部的人口密度在空间上进行分布从而优化其效率。这些设施组成了城市结构的重要部分且帮助塑造人口的空间分布。区域$D$内，以$\rho (x)$表示位置$x$处的人口密度，N个公用设施的位置为$\{x_1,x_2,...x_N\}$，则以如下自然的考虑作为优化目标（人口到各个公用设施的最小距离之和最小）：
 
 $$
-F(x_1,x_2,...,x_N)=\int{\rho(x)\min|x-x_i|}dx
+F(x_1,x_2,...,x_N)=\int{\rho(x)\min\mid x-x_i\mid }dx
 $$
 
 考虑使用各个设施点的Voronoi图替代上式中的最小距离，对于$x$处，其所在的设施点Voronoi cell面积如果为$a(x)$，则其到各设施点的最小距离为到所在Voronoi cell源点的距离与$g\sqrt{a(x)}$成正比，where g is a geometrical factor of order 1 that depends on the shape of the Voronoi cell.【todo: 有待学习geometrical factor of order 1的概念】
@@ -319,12 +317,12 @@ $$
 F(y)=\int{K(y-y')b(y')dy'}
 $$
 
-其中$b(x)$是公司的密度，$K(x)$是核函数，如$K(y)=ke^{-\alpha|y|}$，假设所有公司也是相同的，则最优利润也在均衡状态下得到。接下来讨论如何得到均衡状态。
+其中$b(x)$是公司的密度，$K(x)$是核函数，如$K(y)=ke^{-\alpha\mid y\mid}$，假设所有公司也是相同的，则最优利润也在均衡状态下得到。接下来讨论如何得到均衡状态。
 
 定义函数$y=J(X)$描述在$x$处居住在$y$处工作的比例，则均衡状态时有：
 
 $$
-W(J(x))-t|x-J(x)|=\max_y(W(y)-t|x-y|)
+W(J(x))-t\mid x-J(x)\mid=\max_y(W(y)-t\mid x-\mid )
 $$
 
 关于Fujita-Ogawa model的拓展：
