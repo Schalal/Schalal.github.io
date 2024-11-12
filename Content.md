@@ -1,6 +1,6 @@
 # Notes
 
-大致分为以下几类：
+Categories:
 
 1. [GIS](./GIS/GIS.md)
 2. [CS](./CS/CS.md)
