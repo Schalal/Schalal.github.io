@@ -1,4 +1,9 @@
 locale: "zh-CN"
-# markdown: kramdown
+markdown: kramdown
 math: true
 google_analytics: G-HK5VGXCJTG
+theme: jekyll-theme-primer
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-github-metadata
