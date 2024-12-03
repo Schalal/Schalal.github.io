@@ -1,26 +1,3 @@
-
-- [The spatial orgnization of cities](#the-spatial-orgnization-of-cities)
-  - [Urban Systems](#urban-systems)
-    - [关于城市科学](#关于城市科学)
-    - [关于城市的定义](#关于城市的定义)
-    - [从时空间尺度看待城市](#从时空间尺度看待城市)
-  - [模型和方法](#模型和方法)
-    - [复杂系统的统计物理学](#复杂系统的统计物理学)
-    - [The shape of a science of cities](#the-shape-of-a-science-of-cities)
-    - [How many parameters?](#how-many-parameters)
-    - [城市经济学基本准则](#城市经济学基本准则)
-      - [交互和均衡（Interactions and equilibrium）](#交互和均衡interactions-and-equilibrium)
-      - [效用选择的不变性（Invariance with respect to utility choice）](#效用选择的不变性invariance-with-respect-to-utility-choice)
-    - [数据](#数据)
-    - [跨学科研究的障碍](#跨学科研究的障碍)
-  - [The Spatial Organization of Cities](#the-spatial-organization-of-cities)
-    - [Optimal location](#optimal-location)
-      - [公用设施的空间分布](#公用设施的空间分布)
-      - [零售商店的空间分布](#零售商店的空间分布)
-    - [Measuring a polycentric structure](#measuring-a-polycentric-structure)
-    - [Fujita-Ogawa model](#fujita-ogawa-model)
-    - [The edge-city model](#the-edge-city-model)
-
 # The spatial orgnization of cities
 
 内容参考自Marc Barthelemy《The Structures and Dynamics of Cities —— Urban Data Analysis and Theoretical Modeling》，本书结合了统计物理学和城市经济学的理论，提供了对城市和城市系统的跨学科和现代的研究视角，经典的实证和理论模型在本书中得到评述。
@@ -53,7 +30,9 @@ introduce in a model in order to get more detailed information and predictions.*
 
 ### 从时空间尺度看待城市
 
-不同时间尺度和空间尺度研究的城市问题是不同的，但这些尺度经常混合在一起，使得从均衡角度考虑城市问题和单独考虑某个问题是困难的。承认不同的过程彼此相关联，以上论述成为城市建模的关键问题，研究时考虑时空间尺度也成为必要。*This almost continuous spectrum makes it difficult to consider cities as being in equilibrium but also to view these processes as decoupled from each other. This is a very important problem in city modeling and necessitates a careful discussion of spatial and temporal scales, acknowledging the possibility that various processes are interfering with each other.*
+不同时间尺度和空间尺度研究的城市问题是不同的，但这些尺度经常混合在一起，使得从均衡角度考虑城市问题和单独考虑某个问题是困难的。承认不同的过程彼此相关联，以上论述成为城市建模的关键问题，研究时考虑时空间尺度也成为必要。
+
+*This almost continuous spectrum makes it difficult to consider cities as being in equilibrium but also to view these processes as decoupled from each other. This is a very important problem in city modeling and necessitates a careful discussion of spatial and temporal scales, acknowledging the possibility that various processes are interfering with each other.*
 
 以下聚焦一些特定变量进行分析：
 
@@ -195,7 +174,7 @@ $$
 如果没有正确的理论框架，则常见两类错误：
 
 1. 交通碳排量的计算：以通勤距离作为简介度量量是错误的，因为拥堵的存在，使用通勤时长进行度量则更加合理；
-2. 城市定义的问题：计集模型在不同的城市定义下产生了不同的$\beta$参数估值（0.95/1.37）,从而得出了相反的结论。This is related to the more important problem: the absence of any mechanistic insights about this scaling.
+2. 城市定义的问题：集计模型在不同的城市定义下产生了不同的$\beta$参数估值（0.95/1.37）,从而得出了相反的结论。This is related to the more important problem: the absence of any mechanistic insights about this scaling.
 
 This example clearly illustrates the dangers of interpreting data without a theoretical guide and in the absence of the feedback loop between theory and data.
 
@@ -213,6 +192,8 @@ This example clearly illustrates the dangers of interpreting data without a theo
 
 The locations of homes, activities, and businesses shape a city, and identifying the mechanisms that govern these spatial distributions is crucial for our understanding of these systems.
 
+本章首先对商店和公共设施进行讨论，然后对多中心的识别和度量进行讨论，接着对Fujita-Ogawa模型和edge-city模型进行分析。
+
 ### Optimal location
 
 #### 公用设施的空间分布
@@ -223,7 +204,7 @@ $$
 F(x_1,x_2,...,x_N)=\int{\rho(x)\min\mid x-x_i\mid }dx
 $$
 
-考虑使用各个设施点的Voronoi图替代上式中的最小距离，对于$x$处，其所在的设施点Voronoi cell面积如果为$a(x)$，则其到各设施点的最小距离为到所在Voronoi cell源点的距离与$g\sqrt{a(x)}$成正比，where g is a geometrical factor of order 1 that depends on the shape of the Voronoi cell.【todo: 有待学习geometrical factor of order 1的概念】
+考虑使用各个设施点的Voronoi图替代上式中的最小距离，对于$x$处，其所在的设施点Voronoi cell面积如果为$a(x)$，则其到各设施点的最小距离为到所在Voronoi cell源点的距离与$g$（例如$\sqrt{a(x)}$）成正比，where g is a geometrical factor of order 1 that depends on the shape of the Voronoi cell.【geometrical factor of order 1的意思是，使用该因子进行度量，其变化与单元的线性尺寸（如边长或距离）成正比】
 
 则优化目标可以表示为：
 
@@ -232,7 +213,7 @@ F(a(x))\sim \int \rho(x)\sqrt{a(x)}d^2 x\\
 s.t. \int_D \frac{1}{a(x)}d^2 x = N
 $$
 
-【？】
+约束条件是有$N$个设施点。
 
 使用拉格朗日乘子法进行求解，令：
 
@@ -327,6 +308,14 @@ $$
 
 关于Fujita-Ogawa model的拓展：
 
-
-
 ### The edge-city model
+
+### Monocentric-polycentric transition
+
+### Consequences for mobility
+
+### 
+
+### Urban Villages
+
+### The most economical population distribution
